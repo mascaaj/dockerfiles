@@ -10,3 +10,5 @@ More details in the respective image directories:
 - [dl_docker](https://github.com/mascaaj/dockerfiles/tree/master/dl_docker/) - Used for deep learning related docker files
 - [ci_docker](https://github.com/mascaaj/dockerfiles/tree/master/ci_docker/) - Used for CI/CD related docker files
 - [dev_docker](https://github.com/mascaaj/dockerfiles/tree/master/dev_docker/) - Used for development files / multi platform / language dev
+
+Docker compose files to spawn multiple containers will be added in a separate folder after testing.
