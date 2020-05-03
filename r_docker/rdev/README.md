@@ -22,8 +22,14 @@ R Packages (including dependencies):
 
 ## Usage
 
-Instructions to come
+To run the container and access the r console :
 
 ```
-Instructions to come based on uscases tested
+sudo docker run --name ContainerNameofChoice --it ImageName
+```
+
+Get to the bash terminal :
+
+```
+sudo docker exec -it ContainerNameofChoice bash
 ```
