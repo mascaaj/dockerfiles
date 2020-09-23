@@ -33,16 +33,29 @@ RUN mkdir /home/src
 
 WORKDIR /home/src
 
-RUN git clone https://github.com/mascaaj/covid-analysis.git
-RUN git clone https://github.com/nytimes/covid-19-data.git
-RUN git clone https://github.com/ishaberry/Covid19Canada.git
-RUN git clone https://github.com/imdevskp/covid-19-india-data.git
+#RUN git clone https://github.com/mascaaj/covid-analysis.git
+#RUN git clone https://github.com/nytimes/covid-19-data.git
+#RUN git clone https://github.com/ishaberry/Covid19Canada.git
+#RUN git clone https://github.com/imdevskp/covid-19-india-data.git
 
 #RUN cd covid-analysis
 #RUN Rscript scripts/main.R
 
-CMD cd covid-analysis \
+#CMD cd covid-19-data \  && git fetch \  && git pull
+
+#CMD cd Covid19Canada \  && git fetch \  && git pull
+
+#CMD cd covid-19-india \  && git fetch \  && git pull
+
+CMD git clone https://github.com/mascaaj/covid-analysis.git \
+  && git clone https://github.com/nytimes/covid-19-data.git \
+  && git clone https://github.com/ishaberry/Covid19Canada.git \
+  && git clone https://github.com/imdevskp/covid-19-india-data.git \
+  && cd covid-analysis \
   && git checkout develop \
+  && cd results \
+  && rm -r * \
+  && cd .. \
   && R -e "source('scripts/main.R')"
 
 #mkdir ~/Documents/mydocker/results
